@@ -37,6 +37,11 @@ Examine memory as a string (x/s) an address
 Step 1 instruction
 `si`
 
+### Run Command in shell
+In this case this will give us the global offset table:
+
+`shell objdump -R helloworld`
+
 ### Strip debugging symbols from binary
 `strip <binary>`
 
