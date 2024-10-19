@@ -12,6 +12,9 @@
 
 `info registers`
 
+Info registers shorthand
+`i r $rdi`
+
 `disassemble <function name>`
 
 ### Disassemble with opcodes
@@ -19,14 +22,20 @@
 
 ### Setting breakpoints
 Offset 4 from within main function (gdb displays these as e.g. <+4>)
+
 `break *main+4`
 
 Examine instruction (x/i) at $rip (the instruction pointer)
+
 `x/i $rip`
 
 Examine memory as a string (x/s) an address
+
 `x/s $rip+0xec4`
 `x/s 0x55555555`
+
+Step 1 instruction
+`si`
 
 ### Strip debugging symbols from binary
 `strip <binary>`
