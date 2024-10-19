@@ -17,6 +17,17 @@
 ### Disassemble with opcodes
 `disassemble /r <function name>`
 
+### Setting breakpoints
+Offset 4 from within main function (gdb displays these as e.g. <+4>)
+`break *main+4`
+
+Examine instruction (x/i) at $rip (the instruction pointer)
+`x/i $rip`
+
+Examine memory as a string (x/s) an address
+`x/s $rip+0xec4`
+`x/s 0x55555555`
+
 ### Strip debugging symbols from binary
 `strip <binary>`
 
